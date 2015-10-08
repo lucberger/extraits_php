@@ -263,7 +263,7 @@ ORDER BY CompteNames.Compte_Name
 $query = mysqli_query($link, $sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
 while ($data = mysqli_fetch_array($query)) {
     echo "<option value=".urlencode($data["f1"]);
-    if(trim($data["f1"])==$sel_FrCpte){echo ' selected';}
+    if(trim($data["f1"])==trim($sel_FrCpte)){echo ' selected';}
     echo '>',$data["f1"].'&nbsp &nbsp &nbsp &nbsp'.$data["f2"]." ".$data["f3"]." ".$data["f4"]."",'</option>';
 }
 echo '</select>';
@@ -443,3 +443,4 @@ mysqli_free_result ($query);
 mysqli_close ($link);
 }
 ?>
+
