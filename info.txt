@@ -1,0 +1,35 @@
+J'ai écrit une application en .php reposant sur LAMP ou WAMP qui importe les extraits de compte fournis en format .csv par les banques Belges: ING, Belfius, BNP/Paribas/Fortis.
+
+Tout les extraits sont dans une table, la recherche peut donc être globale.
+Lors de l'importation, le numéro de compte est autant que possible associé avec sa description (différent selon l'origine du .csv)
+ 
+J'aimerais avoir des avis et suggestions et aide de développement.
+
+
+Fonctionnalités:
+
+Sélection des extraits:
+ -entre dates.
+ -par le numéro compte (=banque émettrice).
+ -par le numéro compte débiteur/créditeur, éventuellement dans tout les extraits.
+ -par le montant Débit ou Crédit ou tout.
+ -par transaction dans tout les extraits (actuellement 3 formats importes).
+
+Affichage :
+ -en liste déroulante de tout les comptes des banques émettrices.
+ -en liste déroulante de tout les compte sur lequel il y a eu une transaction.
+ -du montant total de la sélection.
+
+ -résumé de l'affichage des extraits, par exemple:
+ 
+ "Pour le compte 310-12345678-97 (2002-01-02..2015-08-31), vers %, du 2002-01-02 au 2015-08-31, cherchant '', il y a 893 lignes. Le montant total est de 305,40 eur."
+ 
+ "Pour le compte % (1900/01/01..2100/01/01), vers %, du 2002/01/02 au 2015/08/31, cherchant 'shell', il y a 21 lignes. Le montant total est de -929,45 eur."
+ 
+ "Pour le compte % (1900/01/01..2100/01/01), vers EDF LUMINUS , cherchant '', il y a 10 lignes. Le montant total est de -1 629,51 eur."
+
+
+Exemple d'installation du serveur AMP:
+-Pour windows:  http://www.wampserver.com/ 
+-Pour Linux  :  http://www.keley-live.com/blog/lamp-installer-serveur-web/
+
