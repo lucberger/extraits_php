@@ -1,6 +1,8 @@
 <?php
 /*
 http://www.expreg.com/expreg_article.php?art=combobox
+
+upd 30 10 2017
 */
 {$listemois= array(
         'janvier 1',
@@ -35,7 +37,7 @@ global $listemois;
     for ($i=1;$i<13;$i++)
     {
     $j = $i-1;
-    if ($i<20) $i='0'.$i;
+    if ($i<10) $i='0'.$i;
     echo '<option value="',$i,'"';
     if($i==$mois){
     echo ' selected';
@@ -45,6 +47,8 @@ global $listemois;
 }
 
 function listbox_an ($lo=2000,$hi=2020, $an) {
+//list $lo .. $hi
+//select $an
     for ($i=$lo;$i<=$hi;$i++)
     {
     echo '<option value="',$i,'"';
